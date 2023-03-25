@@ -6,6 +6,7 @@ import (
 	"my_package/arraySum"
 	"my_package/fruitMap"
 	"my_package/highestElement"
+	"my_package/stringConcat"
 )
 
 var teste string
@@ -39,5 +40,25 @@ func main() {
 
 	fmt.Printf("%s: %s", fruit, stringResult)
 	fmt.Println("")
+
+	fmt.Println("Concatenando Strings")
+
+	var string1 string
+
+	var string2 string
+
+	fmt.Print("Digite a primeira palavra: ")
+
+	fmt.Scan(&string1)
+
+	fmt.Print("Digite a segunda palavra: ")
+
+	fmt.Scan(&string2)
+
+	stringResult = stringConcat.StringConcat(string1, string2)
+
+	fmt.Println(stringResult)
+
+
 
 }
