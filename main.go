@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"my_package/arraySum"
 	"my_package/highestElement"
-	
 )
+
+var teste string
 
 func main() {
 	myArray := []int{1, 2, 38, 4}
@@ -23,5 +24,7 @@ func main() {
 	result = highestElement.HighestElement(myArray)
 
 	fmt.Println(result)
+
+
 
 }
