@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"my_package/arraySum"
+	"my_package/fruitMap"
 	"my_package/highestElement"
 )
 
@@ -25,6 +27,17 @@ func main() {
 
 	fmt.Println(result)
 
+	var stringResult string
 
+	var fruit string
+
+	fmt.Print("Digite a fruta que deseja procurar: ")
+
+	fmt.Scan(&fruit)
+
+	stringResult = fruitMap.FindFruit(strings.ToLower(fruit))
+
+	fmt.Printf("%s: %s", fruit, stringResult)
+	fmt.Println("")
 
 }
