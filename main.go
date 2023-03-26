@@ -9,6 +9,7 @@ import (
 	"my_package/numberPrime"
 	"my_package/stringConcat"
 	"my_package/week"
+	"my_package/labMath"
 )
 
 var teste string
@@ -92,5 +93,18 @@ func main() {
 
 	fmt.Print("Novo array apenas com numeros primos: ")
 	fmt.Println(primeNumbers)
+
+	fmt.Println("\n *** Pacote LabMath para verificar se o número é primo ***")
+
+	var number int
+
+	var isPrime bool
+
+	fmt.Print("Digite o número desejado: ")
+	fmt.Scan(&number)
+
+	isPrime = labMath.IsNumberPrime(number)
+
+	fmt.Printf("O numero %d é primo?: %t\n", number, isPrime)
 
 }
