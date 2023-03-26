@@ -10,6 +10,7 @@ import (
 	"my_package/stringConcat"
 	"my_package/week"
 	"my_package/labMath"
+	"my_package/numberType"
 )
 
 var teste string
@@ -106,5 +107,14 @@ func main() {
 	isPrime = labMath.IsNumberPrime(number)
 
 	fmt.Printf("O numero %d é primo?: %t\n", number, isPrime)
+
+	fmt.Println("\n *** Verificar se o número é ímpar ou par ***")
+
+	fmt.Print("Digite o número desejado: ")
+	fmt.Scan(&number)
+
+	stringResult = numberType.OddOrEven(number)
+
+	fmt.Printf("O numero %d é %s\n", number, stringResult)
 
 }
