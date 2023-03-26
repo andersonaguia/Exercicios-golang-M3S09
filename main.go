@@ -6,8 +6,9 @@ import (
 	"my_package/arraySum"
 	"my_package/fruitMap"
 	"my_package/highestElement"
+	"my_package/numberPrime"
 	"my_package/stringConcat"
-	"my_package/week"	
+	"my_package/week"
 )
 
 var teste string
@@ -17,17 +18,19 @@ func main() {
 
 	var result int
 
-	fmt.Println("Somando os elementos do array")
+	fmt.Println("\n*** Somando os elementos do array ***")
 
 	result = arraySum.ArraySum(myArray)
 
 	fmt.Println(result)
 
-	fmt.Println("Verificando o elemento de maior valor contido no array")
+	fmt.Println("\n *** Verificando o elemento de maior valor contido no array ***")
 
 	result = highestElement.HighestElement(myArray)
 
 	fmt.Println(result)
+
+	fmt.Println("\n *** Buscando palavras no dicionário de frutas ***")
 
 	var stringResult string
 
@@ -42,7 +45,7 @@ func main() {
 	fmt.Printf("%s: %s", fruit, stringResult)
 	fmt.Println("")
 
-	fmt.Println("Concatenando Strings")
+	fmt.Println("\n *** Concatenando Strings ***")
 
 	var string1 string
 
@@ -60,7 +63,7 @@ func main() {
 
 	fmt.Println(stringResult)
 
-	fmt.Println("Verificando dias da semana")
+	fmt.Println("\n *** Verificando dias da semana ***")
 
 	var day int
 
@@ -71,4 +74,23 @@ func main() {
 	stringResult = week.WhatADay(day)
 
 	fmt.Println(stringResult)
+
+	fmt.Println("\n *** Encontrando números primos em um array ***")
+
+	numbers := []int{}
+
+	for i := 1; i <= 100; i++{
+		numbers = append(numbers, i)
+	}
+
+	var primeNumbers []int
+
+	primeNumbers = numberPrime.CheckPrimeNumbers(numbers)
+
+	fmt.Print("Array original: ")
+	fmt.Println(numbers)
+
+	fmt.Print("Novo array apenas com numeros primos: ")
+	fmt.Println(primeNumbers)
+
 }
