@@ -7,6 +7,7 @@ import (
 	"my_package/fruitMap"
 	"my_package/highestElement"
 	"my_package/stringConcat"
+	"my_package/week"	
 )
 
 var teste string
@@ -59,6 +60,15 @@ func main() {
 
 	fmt.Println(stringResult)
 
+	fmt.Println("Verificando dias da semana")
 
+	var day int
 
+	fmt.Print("Digite o número referente ao dia da semana: ")
+
+	fmt.Scan(&day)
+
+	stringResult = week.WhatADay(day)
+
+	fmt.Println(stringResult)
 }
